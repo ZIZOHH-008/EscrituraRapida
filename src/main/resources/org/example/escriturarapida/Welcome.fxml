@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="472.0" fitWidth="471.0" layoutX="154.0" layoutY="23.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/pinguin.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="174.0" layoutY="136.0" prefHeight="91.0" prefWidth="432.0" text="Escritura Rapida 💻" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Monospaced Bold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="314.0" layoutY="241.0" prefHeight="35.0" prefWidth="146.0" text="Iniciar reto" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="DejaVu Serif" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="286.0" layoutY="289.0" prefHeight="35.0" prefWidth="209.0" text="Seleccionar reto" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="DejaVu Serif" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="339.0" layoutY="336.0" prefHeight="35.0" prefWidth="98.0" text="Tutorial" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="DejaVu Serif" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="356.0" layoutY="378.0" prefHeight="48.0" prefWidth="63.0" text="Salir" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="DejaVu Serif" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
