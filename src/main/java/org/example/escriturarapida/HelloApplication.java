@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);
 
-        stage.setTitle("Hello!");
+        stage.setTitle("Escritura rápida :>");
         stage.setScene(scene);
         stage.sizeToScene();
         stage.show();
