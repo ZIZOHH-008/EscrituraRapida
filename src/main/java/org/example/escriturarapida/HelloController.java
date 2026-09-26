@@ -11,8 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-
-
+import java.util.Random;
 
 
 public class HelloController {
@@ -22,8 +21,17 @@ public class HelloController {
     @FXML private TextField respuestaInField;
     @FXML private Label mensajeLabel;
 
-    //Para comparar palabras
     private String palabraActual;
+
+    private String[] palabras = {
+            "Pepe",
+            "Rodolfo",
+            "JavaFX",
+            "Escritura rápida",
+            "Hola mundo"
+    };
+
+    private Random random = new Random();
 
 
 
@@ -37,8 +45,10 @@ public class HelloController {
 
     //Genera la palabra en el sistemas nomas
     private void generarPalabra() {
-        palabraActual = "Pepe"; //Tiene la logica
-        palabraGenLabel.setText(palabraActual);  //La que ve el jugador
+        int indice = random.nextInt(palabras.length);
+
+        palabraActual = palabras[indice];
+        palabraGenLabel.setText(palabraActual);
     }
 
 
