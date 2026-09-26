@@ -11,7 +11,7 @@
             prefHeight="517.0" prefWidth="775.0"
             xmlns="http://javafx.com/javafx/26"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="org.example.escriturarapida.HelloController">
+            fx:controller="org.example.escriturarapida.WelcomeController">
 
    <children>
       <ImageView fitHeight="472.0" fitWidth="471.0" layoutX="154.0" layoutY="23.0" opacity="0.24" pickOnBounds="true" preserveRatio="true">
@@ -19,30 +19,41 @@
             <Image url="@../../../images/pinguin.png" />
          </image>
       </ImageView>
-      <Label layoutX="165.0" layoutY="136.0" prefHeight="91.0" prefWidth="485.0" text="Escritura Rapida 💻" textAlignment="CENTER" wrapText="true">
+
+      <Label text="Escritura Rapida 💻"
+              layoutX="165.0" layoutY="136.0" prefHeight="91.0" prefWidth="485.0"  textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Monospaced Bold" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="313.0" layoutY="245.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="155.0" text="Iniciar reto" onAction="#cambiarPantalla" textOverrun="LEADING_WORD_ELLIPSIS">
+
+      <Button text="Iniciar reto" onAction="#cambiarPantalla"
+              layoutX="313.0" layoutY="245.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="155.0"   textOverrun="LEADING_WORD_ELLIPSIS">
          <font>
             <Font name="DejaVu Serif" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="290.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0" text="Seleccionar reto" textOverrun="LEADING_WORD_ELLIPSIS">
+
+      <Button text="Seleccionar reto"
+              layoutX="290.0" layoutY="298.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="199.0"  textOverrun="LEADING_WORD_ELLIPSIS">
          <font>
             <Font name="DejaVu Serif" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="329.0" layoutY="349.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="117.0" text="Tutorial" textOverrun="LEADING_WORD_ELLIPSIS">
+
+      <Button text="Tutorial"
+              layoutX="329.0" layoutY="349.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="117.0" textOverrun="LEADING_WORD_ELLIPSIS">
          <font>
             <Font name="DejaVu Serif" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="351.0" layoutY="399.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" text="Salir" textOverrun="LEADING_WORD_ELLIPSIS">
+
+      <Button text="Salir" onAction="#salirJuego"
+              layoutX="351.0" layoutY="399.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="75.0" textOverrun="LEADING_WORD_ELLIPSIS" >
          <font>
             <Font name="DejaVu Serif" size="19.0" />
          </font>
       </Button>
+
    </children>
 </AnchorPane>
