@@ -31,10 +31,13 @@ public class HelloController {
     // ======================== METODOS ========================
 
 
+    @FXML public void initialize() {
+        generarPalabra();
+    }
+
     //Genera la palabra en el sistemas nomas
     private void generarPalabra() {
         palabraActual = "Pepe"; //Tiene la logica
-
         palabraGenLabel.setText(palabraActual);  //La que ve el jugador
     }
 
