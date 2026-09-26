@@ -1,8 +1,8 @@
 # We're missing
 1. ~~Botton to leave the game~~
-2. Appear **Random** Words
+2. ~~Appear **Random** Words~~
 3. ~~Write and accept words~~
-4. punctuation (accept or by time)
+4. punctuation
 5. ~~Label to show error message o correct~~
 6. ~~show time~~
 
