@@ -33,34 +33,6 @@ public class GameController {
     private Timeline timeline;
     private int segundosRestantes;
 
-    private String[] palabras = {
-            "Pepe",
-            "Rodolfo",
-            "JavaFX",
-            "Mártir",
-            "Hola mundo",
-            "Computadora",
-            "Programación",
-            "Teclado",
-            "Ventana",
-            "Desarrollo",
-            "Algoritmo",
-            "Variable",
-            "Método",
-            "Controlador",
-            "Interfaz",
-            "Software",
-            "Aplicación",
-            "Proyecto",
-            "Tecnología",
-            "Código fuente",
-            "Escritura rápida",
-            "Inteligencia",
-            "Programación",
-            "Desarrollo",
-            "Sistema operativo"
-    };
-
     private Random random = new Random();
     public int nivel = 1;
 
@@ -72,11 +44,10 @@ public class GameController {
     }
 
 
-
     private void generarPalabra() {
-        int indice = random.nextInt(palabras.length); //un numero aleatorio para tomar un indice aleatorio
+        int indice = random.nextInt(Palabras.palabrasdificiles.length); //un numero aleatorio para tomar un indice aleatorio
 
-        palabraActual = palabras[indice];   //Guarda la palabra del indice
+        palabraActual = Palabras.palabrasdificiles[indice];   //Guarda la palabra del indice
         palabraGenLabel.setText(palabraActual); //Muestra en el Label la palabra generada
 
         respuestaInField.clear();   //Limpia la palabra que estaba escrita
@@ -112,6 +83,7 @@ public class GameController {
         timeline.setCycleCount(segundosRestantes);  //Establece que el bloque "timeline" se repita 5 veces (pq debe restar en total 5 seg)
         timeline.play();    //Lo inicia
     }
+
 
 
     //Como en el fxml no se pueden pasar parámatros, tocó hacer una sobrecarga de metodos
