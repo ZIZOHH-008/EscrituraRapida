@@ -28,6 +28,7 @@ public class HelloController {
     @FXML private TextField respuestaInField;
     @FXML private Label mensajeLabel;
     @FXML private Label timeLabel;
+    @FXML private Label nivelLabel;
 
     private String palabraActual;
     private PauseTransition pausa;
@@ -39,16 +40,38 @@ public class HelloController {
             "Rodolfo",
             "JavaFX",
             "Mártir",
-            "Hola mundo"
+            "Hola mundo",
+            "Computadora",
+            "Programación",
+            "Teclado",
+            "Ventana",
+            "Desarrollo",
+            "Algoritmo",
+            "Variable",
+            "Método",
+            "Controlador",
+            "Interfaz",
+            "Software",
+            "Aplicación",
+            "Proyecto",
+            "Tecnología",
+            "Código fuente",
+            "Escritura rápida",
+            "Inteligencia",
+            "Programación",
+            "Desarrollo",
+            "Sistema operativo"
     };
 
     private Random random = new Random();
+    private int nivel = 1;
 
 
 
 
     @FXML public void initialize() {
         generarPalabra();
+        nivelLabel.setText("Nivel: " + nivel);
     }
 
 
@@ -67,36 +90,50 @@ public class HelloController {
 
 
     private void iniciarTiempo() {
-        segundosRestantes = 5;
-        timeLabel.setText("0:20 ⏱️"); //aparece el tiempo
+        //Esto lo saqué de internet; debemos analizar esta formula
+        //Básicamente, permite lo del tiempo Nivel 1–5 tienen 20seg; Nivel 6–10 tienen 18seg
+        segundosRestantes = Math.max(2, 20 - ((nivel - 1) / 5) * 2);
+        timeLabel.setText(String.format("0:%02d ⏱️", segundosRestantes));
 
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> {   //espera 1 segundo entre ejecutciones
                     segundosRestantes--;timeLabel.setText(String.format("0:%02d ⏱️", segundosRestantes));   //resta tiempo y muestra
 
                     if (segundosRestantes == 0) {   //Se repide el ciclo
-                        generarPalabra();
+                        timeline.stop();
+                        validarRespuesta(true);
                     }
                 })
         );
 
-        timeline.setCycleCount(5);  //Establece que el bloque "timeline" se repita 5 veces (pq debe restar en total 5 seg)
+        timeline.setCycleCount(segundosRestantes);  //Establece que el bloque "timeline" se repita 5 veces (pq debe restar en total 5 seg)
         timeline.play();    //Lo inicia
     }
 
 
-
+    //Como en el fxml no se pueden pasar parámatros, tocó hacer una sobrecarga de metodos
     @FXML private void validarRespuesta() {
+        validarRespuesta(false);
+    }
+
+    @FXML private void validarRespuesta(boolean tiempoAgotado) {
 
         String respuesta = respuestaInField.getText(); //obtiene el texto que escribió el usuario (textfield)
 
         if (respuesta.equals(palabraActual)) {
             mensajeLabel.setText("Correcto");
             timeline.stop();    //Detiene el bloque de actualizar el tiempo de timeline
+
+            //Aumenta el nivel
+            nivel++;
+            nivelLabel.setText("Nivel: " + nivel);
+
             generarPalabra();   //Repite el bucle de pedir palabra
 
         } else {
             mensajeLabel.setText("Has escrito otra cosa...");
+
+            if (tiempoAgotado) {generarPalabra();}
         }
     }
 
