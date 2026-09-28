@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.escriturarapida.finalScreenController">
+
+
+   <children>
+      <ImageView fitHeight="418.0" fitWidth="402.0" layoutX="203.0" layoutY="45.0" nodeOrientation="INHERIT" opacity="0.19" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/loose.jpeg" />
+         </image>
+      </ImageView>
+
+      <Button fx:id="reiniciarButton"
+              layoutX="348.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="143.0" text="Reintentar">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+
+      <Label fx:id="nivelLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="221.0" layoutY="189.0" prefHeight="30.0" prefWidth="255.0" text="Niveles completados:" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="tituloFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="285.0" layoutY="74.0" prefHeight="40.0" prefWidth="269.0" text="JUEGO TERMINADO" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Monospaced Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="numFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="505.0" layoutY="180.0" prefHeight="21.0" prefWidth="38.0" text="03" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Noto Sans Bamum Regular" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="mensajeFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="336.0" layoutY="268.0" prefHeight="17.0" prefWidth="167.0" text="¡Buen intento!" textOverrun="CENTER_WORD_ELLIPSIS">
+         <font>
+            <Font name="Liberation Sans" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

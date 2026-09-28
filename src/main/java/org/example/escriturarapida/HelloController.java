@@ -64,8 +64,7 @@ public class HelloController {
     };
 
     private Random random = new Random();
-    private int nivel = 1;
-
+    public int nivel = 1;
 
 
 
@@ -73,6 +72,7 @@ public class HelloController {
         generarPalabra();
         nivelLabel.setText("Nivel: " + nivel);
     }
+
 
 
     private void generarPalabra() {
@@ -136,7 +136,6 @@ public class HelloController {
             if (tiempoAgotado) {generarPalabra();}
         }
     }
-
 
 
 
