@@ -14,11 +14,8 @@ import javafx.util.Duration;
 
 import java.io.IOException;
 import java.util.Random;
-import javafx.animation.PauseTransition;
-import javafx.util.Duration;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.util.Duration;
 
 
 
@@ -71,7 +68,7 @@ public class HelloController {
 
     private void iniciarTiempo() {
         segundosRestantes = 5;
-        timeLabel.setText("0:05 ⏱️"); //aparece el tiempo
+        timeLabel.setText("0:20 ⏱️"); //aparece el tiempo
 
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> {   //espera 1 segundo entre ejecutciones
