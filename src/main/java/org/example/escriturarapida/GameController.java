@@ -20,9 +20,7 @@ import javafx.animation.Timeline;
 
 
 
-
-
-public class HelloController {
+public class GameController {
 
     @FXML private Label palabraGenLabel;
     @FXML private TextField respuestaInField;
@@ -102,6 +100,11 @@ public class HelloController {
                     if (segundosRestantes == 0) {   //Se repide el ciclo
                         timeline.stop();
                         validarRespuesta(true);
+                        try {
+                            pantallaFinal();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 })
         );
@@ -160,6 +163,24 @@ public class HelloController {
         Stage stage = (Stage) ((Node) event.getSource())
                 .getScene()
                 .getWindow();
+
+        stage.setScene(new Scene(root));
+    }
+
+
+    private void pantallaFinal() throws IOException {
+        FXMLLoader loader = new FXMLLoader(
+                getClass().getResource("gameOver.fxml")
+        );
+
+        Parent root = loader.load();
+
+        FinalScreenController finalController = loader.getController();
+        finalController.gameController = this;
+        finalController.nivelAlcanzado();
+        finalController.mensajeFinal();
+
+        Stage stage = (Stage) timeLabel.getScene().getWindow();
 
         stage.setScene(new Scene(root));
     }

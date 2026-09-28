@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.escriturarapida.finalScreenController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.escriturarapida.FinalScreenController">
 
 
    <children>
@@ -17,7 +17,7 @@
          </image>
       </ImageView>
 
-      <Button fx:id="reiniciarButton"
+      <Button fx:id="reiniciarButton" onAction="#reiniciarNiveles"
               layoutX="348.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="143.0" text="Reintentar">
          <font>
             <Font size="18.0" />
@@ -34,7 +34,8 @@
             <Font name="Monospaced Bold" size="29.0" />
          </font>
       </Label>
-      <Label fx:id="numFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="505.0" layoutY="180.0" prefHeight="21.0" prefWidth="38.0" text="03" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label fx:id="numFinalLabel"
+             alignment="TOP_CENTER" contentDisplay="TOP" layoutX="505.0" layoutY="180.0" prefHeight="21.0" prefWidth="38.0" text="03" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="Noto Sans Bamum Regular" size="25.0" />
          </font>

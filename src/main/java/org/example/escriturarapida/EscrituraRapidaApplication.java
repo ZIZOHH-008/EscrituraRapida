@@ -10,10 +10,10 @@ import java.io.IOException;
 
 
 
-public class HelloApplication extends Application {
+public class EscrituraRapidaApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Welcome.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(EscrituraRapidaApplication.class.getResource("Welcome.fxml"));
 
         // el "Welcome.fxml" se guarda en "root"
         Parent root = fxmlLoader.load();
