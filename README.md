@@ -1,9 +1,11 @@
 # We're missing
-1. Mejorar la pantalla final de los puntajes
-2. ARREGLAR LO DE PALABRAS SEGUN NIVEL
-3. Diferentes mensajes de que quedó malo
-4. hacer varias listas que tengan palabras dificiles 
-5. Quitar lo de "seleccionar nivel" del menú
+- Aplicar POE
+0. Revisar todos los HU
+1. Mejorar lista palabras
+2. Quitar lo de "seleccionar nivel" del menú
+3. Mejorar la pantalla final de los puntajes
+4. Diferentes mensajes de que quedó malo
+5. Mirar si verifica cuando se acaba el tiempo
 
 
 
