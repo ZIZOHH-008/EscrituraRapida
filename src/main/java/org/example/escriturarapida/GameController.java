@@ -44,11 +44,30 @@ public class GameController {
     }
 
 
-    private void generarPalabra() {
-        int indice = random.nextInt(Palabras.palabrasdificiles.length); //un numero aleatorio para tomar un indice aleatorio
 
-        palabraActual = Palabras.palabrasdificiles[indice];   //Guarda la palabra del indice
-        palabraGenLabel.setText(palabraActual); //Muestra en el Label la palabra generada
+    private void elegirPalabra(String[] palabras) {
+        int indice = random.nextInt(palabras.length); //un numero aleatorio para tomar un indice aleatorio
+
+        palabraActual = palabras[indice];  //Guarda la palabra del indice
+        palabraGenLabel.setText(palabraActual);  //Muestra en el Label la palabra generada
+    }
+
+
+    private void generarPalabra() {
+
+        if(nivel<=10){
+            elegirPalabra(Palabra.palabrasFaciles);
+        }
+        else if(nivel>10 && nivel<=20){
+            elegirPalabra(Palabra.palabrasMedias);
+        }
+        else if(nivel>20 && nivel<=30){
+            elegirPalabra(Palabra.palabrasDificiles);
+        }
+        else{
+            elegirPalabra(Palabra.palabrasImposibles);
+        }
+
 
         respuestaInField.clear();   //Limpia la palabra que estaba escrita
         respuestaInField.requestFocus();    //El cursor queda listo para escribir
