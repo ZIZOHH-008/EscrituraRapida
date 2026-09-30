@@ -63,8 +63,11 @@ public class FinalScreenController {
         else if(nivel>5 && nivel<20){
             mensajeFinalLabel.setText("Podrías mejorar ese nivel...");
         }
-        else if(nivel>20){
+        else if(nivel>20 && nivel<31){
             mensajeFinalLabel.setText("Lo podrías mejorar, pero está bien");
+        }
+        else if(nivel>=31){
+            mensajeFinalLabel.setText("EL TRUE GOAT");
         }
 
     }

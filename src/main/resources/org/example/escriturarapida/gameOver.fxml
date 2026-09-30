@@ -17,14 +17,13 @@
          </image>
       </ImageView>
 
-      <Button fx:id="reiniciarButton" onAction="#reiniciarNiveles"
-              layoutX="348.0" layoutY="330.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="143.0" text="Reintentar">
+      <Button fx:id="reiniciarButton" layoutX="337.0" layoutY="329.0" mnemonicParsing="false" onAction="#reiniciarNiveles" prefHeight="40.0" prefWidth="143.0" text="Reintentar">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
 
-      <Label fx:id="nivelLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="221.0" layoutY="189.0" prefHeight="30.0" prefWidth="255.0" text="Niveles completados:" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label fx:id="nivelLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="226.0" layoutY="189.0" prefHeight="30.0" prefWidth="255.0" text="Niveles completados:" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="Liberation Sans" size="24.0" />
          </font>
@@ -34,13 +33,12 @@
             <Font name="Monospaced Bold" size="29.0" />
          </font>
       </Label>
-      <Label fx:id="numFinalLabel"
-             alignment="TOP_CENTER" contentDisplay="TOP" layoutX="505.0" layoutY="180.0" prefHeight="21.0" prefWidth="38.0" text="03" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label fx:id="numFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="510.0" layoutY="181.0" prefHeight="21.0" prefWidth="38.0" text="03" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="Noto Sans Bamum Regular" size="25.0" />
          </font>
       </Label>
-      <Label fx:id="mensajeFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="336.0" layoutY="268.0" prefHeight="17.0" prefWidth="167.0" text="¡Buen intento!" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Label fx:id="mensajeFinalLabel" alignment="TOP_CENTER" contentDisplay="TOP" layoutX="95.0" layoutY="268.0" prefHeight="27.0" prefWidth="626.0" text="Fracasado" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="Liberation Sans" size="24.0" />
          </font>

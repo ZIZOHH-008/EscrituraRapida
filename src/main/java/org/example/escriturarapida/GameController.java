@@ -90,16 +90,24 @@ public class GameController {
                 new KeyFrame(Duration.seconds(1), event -> {   //espera 1 segundo entre ejecutciones
                     segundosRestantes--;timeLabel.setText(String.format("0:%02d ⏱️", segundosRestantes));   //resta tiempo y muestra
 
-                    if (segundosRestantes == 0) {   //Se repide el ciclo
+
+                    if (segundosRestantes == 0) {
                         timeline.stop();
-                        validarRespuesta(true);
-                        try {
-                            pantallaFinal();
-                        } catch (IOException e) {
-                            e.printStackTrace();
+
+                        if (respuestaInField.getText().equals(palabraActual)) {
+                            nivel++;
+                            nivelLabel.setText("Nivel: " + nivel);
+                            generarPalabra();
+                        } else {
+                            try {
+                                pantallaFinal();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
                         }
                     }
-                })
+
+                }) //Vaina tan larga dentro de un paréntesis
         );
 
         timeline.setCycleCount(segundosRestantes);  //Establece que el bloque "timeline" se repita 5 veces (pq debe restar en total 5 seg)
@@ -113,7 +121,7 @@ public class GameController {
         validarRespuesta(false);
     }
 
-    @FXML private void validarRespuesta(boolean tiempoAgotado) {
+    @FXML private boolean validarRespuesta(boolean tiempoAgotado) {
 
         String respuesta = respuestaInField.getText(); //obtiene el texto que escribió el usuario (textfield)
 
@@ -126,11 +134,16 @@ public class GameController {
             nivelLabel.setText("Nivel: " + nivel);
 
             generarPalabra();   //Repite el bucle de pedir palabra
+            return true;
 
         } else {
             mensajeLabel.setText("Has escrito otra cosa...");
 
-            if (tiempoAgotado) {generarPalabra();}
+            if (tiempoAgotado) {
+                generarPalabra();
+            }
+
+            return false;
         }
     }
 

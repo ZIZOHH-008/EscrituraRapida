@@ -101,7 +101,6 @@ public class Palabra {
             "Interactividad gráfica",
             "Productividad académica",
             "Accesibilidad digital",
-            "Internacionalización empresarial",
             "Administración informática",
             "Desarrollo tecnológico",
             "Análisis computacional",
