@@ -2,13 +2,8 @@
 Maybe: Erorres por versiones que salen en consola 
 0. Mejorar diseño y decoración
 1. Documentación 
-2. Aplicar POE 
-3. Revisar todos los HU
-
-4. Diferentes mensajes de que quedó malo
-7. Mostrar un mensaje positivo o de error
-
-
+2. Aplicar POE
+3. Comentarios
 
 
 

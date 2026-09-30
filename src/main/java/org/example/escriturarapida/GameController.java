@@ -113,6 +113,10 @@ public class GameController {
     }
 
 
+    private String elegirMensaje(String[] mensajes) {
+        int indice = random.nextInt(mensajes.length);
+        return mensajes[indice];
+    }
 
     //Como en el fxml no se pueden pasar parámatros, tocó hacer una sobrecarga de metodos
     @FXML private void validarRespuesta() {
@@ -124,7 +128,7 @@ public class GameController {
         String respuesta = respuestaInField.getText(); //obtiene el texto que escribió el usuario (textfield)
 
         if (respuesta.equals(palabraActual)) {
-            mensajeLabel.setText("Correcto");
+            mensajeLabel.setText(elegirMensaje(Palabra.exitoso));
             timeline.stop();    //Detiene el bloque de actualizar el tiempo de timeline
 
             //Aumenta el nivel
@@ -140,7 +144,7 @@ public class GameController {
             return true;
 
         } else {
-            mensajeLabel.setText("Has escrito otra cosa...");
+            mensajeLabel.setText(elegirMensaje(Palabra.fracasado));
 
             PauseTransition pausa = new PauseTransition(Duration.seconds(1));
             pausa.setOnFinished(event -> mensajeLabel.setText(""));

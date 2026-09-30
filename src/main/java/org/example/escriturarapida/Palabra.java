@@ -154,4 +154,17 @@ public class Palabra {
             "Electromagnetismo"
     };
 
+
+    public static String[] exitoso = {
+            "¡Correcto!",
+            "¡Nivel superado!",
+            "¡Excelente!",
+            "La Cabra"
+    };
+
+    public static String[] fracasado = {
+            "¡Incorrecto!",
+            "¡Casi lo logras!",
+            "¿Quieres unas gafas?"
+    };
 }
