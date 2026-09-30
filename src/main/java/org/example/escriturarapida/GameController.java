@@ -95,9 +95,7 @@ public class GameController {
                         timeline.stop();
 
                         if (respuestaInField.getText().equals(palabraActual)) {
-                            nivel++;
-                            nivelLabel.setText("Nivel: " + nivel);
-                            generarPalabra();
+                            validarRespuesta(true);
                         } else {
                             try {
                                 pantallaFinal();
@@ -130,14 +128,23 @@ public class GameController {
             timeline.stop();    //Detiene el bloque de actualizar el tiempo de timeline
 
             //Aumenta el nivel
-            nivel++;
-            nivelLabel.setText("Nivel: " + nivel);
+            PauseTransition pausa = new PauseTransition(Duration.seconds(0.5));
 
-            generarPalabra();   //Repite el bucle de pedir palabra
+            pausa.setOnFinished(event -> {  //Repite el bucle de pedir palabra
+                nivel++;
+                nivelLabel.setText("Nivel: " + nivel);
+                generarPalabra();
+            });
+            pausa.play();
+
             return true;
 
         } else {
             mensajeLabel.setText("Has escrito otra cosa...");
+
+            PauseTransition pausa = new PauseTransition(Duration.seconds(1));
+            pausa.setOnFinished(event -> mensajeLabel.setText(""));
+            pausa.play();
 
             if (tiempoAgotado) {
                 generarPalabra();
