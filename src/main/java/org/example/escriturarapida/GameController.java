@@ -36,9 +36,12 @@ public class GameController {
     private Random random = new Random();
     public int nivel = 1;
 
+    Stage stage;
+
 
 
     @FXML public void initialize() {
+        Musica.reproducir();
         generarPalabra();
         nivelLabel.setText("Nivel: " + nivel);
     }
@@ -145,6 +148,8 @@ public class GameController {
 
 
     @FXML private void menuPrincipal(ActionEvent event) throws IOException{
+        Musica.detener();
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("Welcome.fxml")
         );
@@ -160,6 +165,8 @@ public class GameController {
 
 
     private void pantallaFinal() throws IOException {
+        Musica.detener();
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("gameOver.fxml")
         );
@@ -170,8 +177,6 @@ public class GameController {
         finalController.gameController = this;
         finalController.nivelAlcanzado();
         finalController.mensajeFinal();
-
-        Stage stage = (Stage) timeLabel.getScene().getWindow();
 
         stage.setScene(new Scene(root));
     }

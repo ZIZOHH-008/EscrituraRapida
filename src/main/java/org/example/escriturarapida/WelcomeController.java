@@ -15,7 +15,13 @@ import java.io.IOException;
 
 public class WelcomeController {
 
+    public void initialize() {
+        Musica.reproducirMenu();
+    }
+
     @FXML public void entrarPantallaJuego(ActionEvent event) throws IOException {
+        Musica.detener();
+
         FXMLLoader loader = new FXMLLoader(
                 getClass().getResource("basicGame.fxml")
         );
@@ -26,9 +32,11 @@ public class WelcomeController {
                 .getScene()
                 .getWindow();
 
+        GameController gameController = loader.getController();
+        gameController.stage = stage;
+
         stage.setScene(new Scene(root));
     }
-
 
 
     @FXML private void salirJuego(ActionEvent event) {

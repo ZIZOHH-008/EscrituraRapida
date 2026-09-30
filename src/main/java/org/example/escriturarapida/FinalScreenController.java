@@ -46,6 +46,9 @@ public class FinalScreenController {
                 .getScene()
                 .getWindow();
 
+        GameController gameController = loader.getController();
+        gameController.stage = stage;
+
         stage.setScene(new Scene(root));
     }
 

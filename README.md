@@ -9,6 +9,7 @@
 6. Ponerle música (Cazone preferite, mira los de Mortal Shero)
 7. Mostrar un mensaje positivo o de error
 8. Mejorar diseño y decoración
+9. Documentación
 
 
 
