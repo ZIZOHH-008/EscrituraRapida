@@ -1,9 +1,22 @@
 # We're missing
 Maybe: Erorres por versiones que salen en consola 
-0. Mejorar diseño y decoración
-1. Documentación 
-2. Aplicar POE
-3. Comentarios
+- Mejorar diseño y decoración 
+- Documentación 
+- Aplicar POE 
+- Comentarios por el código
+
+
+
+### Acerca de la clase del 26 de septiembre
+- Examinar que ruta aparece en los elementos en la configuración de "Clase controladora" en SB
+- Examinar los métodos de los elementos desde SB
+- Examinar los Eventos que tienen los botones, etc.
+- Imprimir en consola según lo eventos en el videojuego
+- Mejorar interfaz (usar grids, centers, etc.)
+- Crear y usar "Clase interfaz", lo que conlleva metodo propios y por default
+- Crear carpeta de "controllers" e "interfaces"
+- Observar como queda el "Show center control skeleton en SB"
+
 
 
 
