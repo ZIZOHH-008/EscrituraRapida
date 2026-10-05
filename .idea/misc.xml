@@ -7,6 +7,8 @@
     <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
+    <option name="OTHER_OPTIONS" value="-encoding utf-8 -docencoding utf-8 -charset utf-8 -author -version" />
+    <option name="LOCALE" value="es_ES" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -15,7 +17,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="21" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="corretto-25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

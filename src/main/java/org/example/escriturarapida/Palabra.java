@@ -1,7 +1,17 @@
 package org.example.escriturarapida;
 
+/**
+ * Data repository containing word banks and feedback phrases.
+ * Stores target string arrays categorized by difficulty tier and feedback messages.
+ *
+ * @author Juan Parra
+ * @author Brian Rodríguez
+ * @author Nicolas Martínez
+ * @version 1.0
+ */
 public class Palabra {
 
+    /** Array of easy difficulty words for initial game levels. */
     public static String[] palabrasFaciles = {
             "Pepe",
             "Rodolfo",
@@ -36,8 +46,7 @@ public class Palabra {
             "Función",
     };
 
-
-
+    /** Array of medium difficulty words and short phrases. */
     public static String[] palabrasMedias = {
             "Escritura rápida",
             "Código fuente",
@@ -67,7 +76,7 @@ public class Palabra {
             "Menú de opciones"
     };
 
-
+    /** Array of hard difficulty terms and longer phrases. */
     public static String[] palabrasDificiles = {
             "Programación avanzada",
             "Administración pública",
@@ -110,7 +119,7 @@ public class Palabra {
             "Virtualización informática"
     };
 
-
+    /** Array of extremely complex terms for maximum difficulty tier. */
     public static String[] palabrasImposibles = {
             "Desoxirribonucleico",
             "Esternocleidomastoideo",
@@ -154,7 +163,7 @@ public class Palabra {
             "Electromagnetismo"
     };
 
-
+    /** Random success feedback strings displayed upon correct input. */
     public static String[] exitoso = {
             "¡Correcto!",
             "¡Nivel superado!",
@@ -162,6 +171,7 @@ public class Palabra {
             "La Cabra"
     };
 
+    /** Random failure feedback strings displayed upon incorrect input. */
     public static String[] fracasado = {
             "¡Incorrecto!",
             "¡Casi lo logras!",
