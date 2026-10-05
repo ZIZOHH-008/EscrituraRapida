@@ -1,9 +1,7 @@
 # We're missing
 Maybe: Erorres por versiones que salen en consola 
 - Mejorar diseño y decoración 
-- Documentación 
-- Aplicar POE 
-- Comentarios por el código
+
 
 
 
