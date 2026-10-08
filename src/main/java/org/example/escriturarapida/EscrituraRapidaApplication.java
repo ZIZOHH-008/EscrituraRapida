@@ -37,4 +37,13 @@ public class EscrituraRapidaApplication extends Application {
         stage.sizeToScene();
         stage.show();
     }
+
+    /**
+     * Main entry point to launch the JavaFX application.
+     *
+     * @param args Command line arguments.
+     */
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
