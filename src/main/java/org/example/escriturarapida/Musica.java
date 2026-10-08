@@ -3,6 +3,7 @@ package org.example.escriturarapida;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.net.URL;
 import java.util.Random;
 
 /**
@@ -23,6 +24,7 @@ public class Musica {
      * Randomly selects a gameplay soundtrack from available audio tracks and plays it in continuous loop.
      */
     public static void reproducir() {
+        detener();
 
         String[] canciones = {
                 "/Music/Grimm.mp3",
@@ -33,30 +35,42 @@ public class Musica {
         };
 
         Random random = new Random();
-        String ruta = Musica.class
-                .getResource(canciones[random.nextInt(canciones.length)])
-                .toExternalForm();
+        String cancionSeleccionada = canciones[random.nextInt(canciones.length)];
 
-        Media media = new Media(ruta);
-        reproductor = new MediaPlayer(media);
-
-        reproductor.setCycleCount(MediaPlayer.INDEFINITE);
-        reproductor.play();
+        try {
+            URL resource = Musica.class.getResource(cancionSeleccionada);
+            if (resource != null) {
+                Media media = new Media(resource.toExternalForm());
+                reproductor = new MediaPlayer(media);
+                reproductor.setCycleCount(MediaPlayer.INDEFINITE);
+                reproductor.play();
+            } else {
+                System.err.println("No se encontró la canción: " + cancionSeleccionada);
+            }
+        } catch (Exception e) {
+            System.err.println("No se pudo reproducir la música en este sistema: " + e.getMessage());
+        }
     }
 
     /**
      * Loads and continuously loops designated menu background music.
      */
     public static void reproducirMenu() {
-        String ruta = Musica.class
-                .getResource("/Music/menu.mp3")
-                .toExternalForm();
+        detener();
 
-        Media media = new Media(ruta);
-        reproductor = new MediaPlayer(media);
-
-        reproductor.setCycleCount(MediaPlayer.INDEFINITE);
-        reproductor.play();
+        try {
+            URL resource = Musica.class.getResource("/Music/menu.mp3");
+            if (resource != null) {
+                Media media = new Media(resource.toExternalForm());
+                reproductor = new MediaPlayer(media);
+                reproductor.setCycleCount(MediaPlayer.INDEFINITE);
+                reproductor.play();
+            } else {
+                System.err.println("No se encontró el archivo /Music/menu.mp3");
+            }
+        } catch (Exception e) {
+            System.err.println("No se pudo reproducir la música del menú en este sistema: " + e.getMessage());
+        }
     }
 
     /**
@@ -64,7 +78,13 @@ public class Musica {
      */
     public static void detener() {
         if (reproductor != null) {
-            reproductor.stop();
+            try {
+                reproductor.stop();
+                reproductor.dispose();
+            } catch (Exception e) {
+                // Captura excepciones en el cierre del reproductor
+            }
+            reproductor = null;
         }
     }
 }
