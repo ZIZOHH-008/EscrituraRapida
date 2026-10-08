@@ -91,6 +91,12 @@ public class GameController implements IGameController {
      */
     private void elegirPalabra(String[] palabras) {
         int indice = random.nextInt(palabras.length);
+
+        if (palabras[indice].equals(palabraActual)) {
+            elegirPalabra(palabras); //Funcion recursiva que puede ser infinita
+            return; //Cuando seleccione otra palabra, finaliza esta función
+        }
+
         palabraActual = palabras[indice];
         palabraGenLabel.setText(palabraActual);
     }

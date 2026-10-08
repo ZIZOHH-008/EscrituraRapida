@@ -19,6 +19,7 @@ public class Launcher {
      * @param args Command line arguments passed during execution.
      */
     public static void main(String[] args) {
+        System.out.println("¿Inició? Ji");
         Application.launch(EscrituraRapidaApplication.class, args);
     }
 }
