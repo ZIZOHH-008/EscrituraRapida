@@ -93,7 +93,7 @@ public class GameController implements IGameController {
         int indice = random.nextInt(palabras.length);
 
         if (palabras[indice].equals(palabraActual)) {
-            elegirPalabra(palabras); //Funcion recursiva que puede ser infinita
+            elegirPalabra(palabras); //Función recursiva que puede ser infinita
             return; //Cuando seleccione otra palabra, finaliza esta función
         }
 
@@ -128,7 +128,7 @@ public class GameController implements IGameController {
      */
     private void iniciarTiempo() {
         segundosRestantes = Math.max(2, 20 - ((nivel - 1) / 5) * 2);
-        timeLabel.setText(String.format("0:%02d ⏱️", segundosRestantes));
+        timeLabel.setText(String.format("0:%02d ⏱", segundosRestantes));
 
         if (timeline != null) {
             timeline.stop();
@@ -137,7 +137,7 @@ public class GameController implements IGameController {
         timeline = new Timeline(
                 new KeyFrame(Duration.seconds(1), event -> {
                     segundosRestantes--;
-                    timeLabel.setText(String.format("0:%02d ⏱️", segundosRestantes));
+                    timeLabel.setText(String.format("0:%02d ⏱", segundosRestantes));
 
                     if (segundosRestantes <= 0) {
                         timeline.stop();
