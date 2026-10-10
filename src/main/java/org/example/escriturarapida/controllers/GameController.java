@@ -143,11 +143,7 @@ public class GameController implements IGameController {
                         timeline.stop();
                         logEvent("Time expired at Level " + nivel + " for word: " + palabraActual);
 
-                        try {
-                            pantallaFinal();
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        validarRespuesta(true);
                     }
                 })
         );
@@ -210,7 +206,11 @@ public class GameController implements IGameController {
             pausa.play();
 
             if (tiempoAgotado) {
-                generarPalabra();
+                try {
+                    pantallaFinal();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
 
             return false;
